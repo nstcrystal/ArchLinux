@@ -178,7 +178,7 @@ Tạo thư mục:
 mkdir -p ~/Pictures/Wallpapers
 ```
 
-## Sau Phần 1 bạn sẽ có
+## Sau khi hoàn thành
 
 ✓ Hyprland 0.55.4
 
