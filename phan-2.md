@@ -20,7 +20,7 @@ Trong `~/.config/hypr` tạo các file sau:
 
 Tạo bằng lệnh:
 
-```txt
+```bash
 touch ~/.config/hypr/{monitors.conf,env.conf,input.conf,appearance.conf,animations.conf,keybinds.conf,windowrules.conf,autostart.conf}
 ```
 
@@ -270,7 +270,7 @@ exec-once = wl-paste --type text --watch cliphist store
 
 Kiểm tra cú pháp bằng:
 
-```txt
+```bash
 hyprctl reload
 ```
 

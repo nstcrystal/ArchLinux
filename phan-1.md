@@ -5,7 +5,7 @@
 Đầu tiên hãy cập nhật Arch Linux:
 
 
-```txt
+```bash
 sudo pacman -Syu
 ```
 
@@ -15,7 +15,7 @@ Khởi động lại nếu kernel được cập nhật.
 
 Chạy lệnh sau:
 
-```txt
+```bash
 sudo pacman -S \
 foot \
 waybar \
@@ -79,7 +79,7 @@ Mỗi package để làm gì?
 
 Chạy:
 
-```txt
+```bash
 systemctl --user status pipewire
 ```
 
@@ -93,32 +93,32 @@ là ổn
 
 ## Bước 4: Kiểm tra NetworkManager
 
-```txt
+```bash
 systemctl status NetworkManager
 ```
 
 Nếu chưa chạy:
 
-```txt
+```bash
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 ```
 
 ## Bước 5: Tạo cấu trúc thư mục
 
-```txt
+```bash
 mkdir -p ~/.config/{hypr,waybar,foot,rofi,hyprpaper,mako,wlogout}
 ```
 
 Kiểm tra:
 
-```txt
+```bash
 tree ~/.config
 ```
 
 Nếu chưa có `tree`:
 
-```txt
+```bash
 sudo pacman -S tree
 ```
 
@@ -126,13 +126,13 @@ sudo pacman -S tree
 
 Đây là bước rất quan trọng.
 
-```txt
+```bash
 mkdir -p ~/.config/backup
 ```
 
 Sau đó:
 
-```txt
+```bash
 mv ~/.config/hypr ~/.config/backup/hypr-old
 ```
 
@@ -140,7 +140,7 @@ mv ~/.config/hypr ~/.config/backup/hypr-old
 
 Sau đó tạo lại:
 
-```txt
+```bash
 mkdir ~/.config/hypr
 ```
 
@@ -148,23 +148,23 @@ mkdir ~/.config/hypr
 
 Chạy:
 
-```txt
+```bash
 foot --version
 ```
 
-```txt
+```bash
 waybar --version
 ```
 
-```txt
+```bash
 rofi -v
 ```
 
-```txt
+```bash
 hyprpaper --version
 ```
 
-```txt
+```bash
 hyprlock --version
 ```
 
