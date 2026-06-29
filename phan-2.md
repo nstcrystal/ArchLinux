@@ -75,6 +75,11 @@ env = SDL_VIDEODRIVER,wayland
 env = MOZ_ENABLE_WAYLAND,1
 env = CLUTTER_BACKEND,wayland
 env = GDK_BACKEND,wayland,x11
+
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+env = LIBVA_DRIVER_NAME,nvidia
+
 ```
 
 Sau này đổi terminal chỉ sửa đúng một dòng.
