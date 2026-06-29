@@ -65,14 +65,16 @@ $terminal = foot
 $fileManager = thunar
 $menu = rofi -show drun
 
-#############################################################
-# Environment
-#############################################################
+##################################################
+# Environment Variables
+##################################################
 
 env = XCURSOR_SIZE,24
 env = QT_QPA_PLATFORM,wayland
 env = SDL_VIDEODRIVER,wayland
 env = MOZ_ENABLE_WAYLAND,1
+env = CLUTTER_BACKEND,wayland
+env = GDK_BACKEND,wayland,x11
 ```
 
 Sau này đổi terminal chỉ sửa đúng một dòng.
