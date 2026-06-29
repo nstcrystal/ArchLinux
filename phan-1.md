@@ -1,4 +1,4 @@
-# Bước 1: Cập nhật hệ thống
+# Phần 1: Cập nhật hệ thống
 
 ## Bước 1: Cập nhật hệ thống
 
