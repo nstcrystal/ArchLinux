@@ -106,6 +106,64 @@ và
 ~/.config/rofi/tokyo-night.rasi
 ```
 
+File `config.rasi` giống như "file chính", dùng để nạp theme.
+
+Ví dụ:
+
+```txt
+@theme "tokyo-night"
+```
+
+Sau này nếu bạn tạo thêm:
+
+- `catppuccin.rasi`
+- `gruvbox.rasi`
+- `nord.rasi`
+
+thì chỉ cần sửa một dòng:
+
+```txt
+@theme "catppuccin"
+```
+
+là toàn bộ giao diện Rofi sẽ đổi.
+
+ 
+`tokyo-night.rasi` mới là file chứa toàn bộ giao diện.
+
+Ví dụ:
+
+- màu nền
+- màu chữ
+- bo góc
+- kích thước
+- khoảng cách
+- font
+- icon
+- animation
+
+```txt
+* {
+    bg: #1a1b26;
+    fg: #c0caf5;
+    accent: #7aa2f7;
+}
+
+window {
+    background-color: @bg;
+    border-radius: 12px;
+}
+
+inputbar {
+    background-color: #24283b;
+    border-radius: 10px;
+}
+
+element selected {
+    background-color: @accent;
+}
+```
+
 ## Wallpaper
 
 Thay vì
