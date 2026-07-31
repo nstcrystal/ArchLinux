@@ -76,7 +76,7 @@ def main():
 
     if not data:
         console.print(
-            "[bold red]Không thể kết nối đến máy chủ thời tiết![/bold red]"
+            "[bold red]Không thể kết nối đến máy chủ Thời tiết![/bold red]"
         )
         return
 
@@ -87,18 +87,18 @@ def main():
 
     # Tạo bảng thông số
     table = Table(show_header=False, box=None, padding=(0, 2))
-    table.add_column("Chỉ số", style="bold cyan")
-    table.add_column("Giá trị", style="yellow")
+    table.add_column("Chỉ số", style="bold cyan1")
+    table.add_column("Giá trị", style="white")
 
-    table.add_row("Nhiệt độ:", f"{temp} °C")
-    table.add_row("Tốc độ gió:", f"{windspeed} km/h")
+    table.add_row("Nhiệt độ:", f"{temp} [yellow1]°C[/yellow1]")
+    table.add_row("Tốc độ gió:", f"{windspeed} [yellow1]km/h[/yellow1]")
     table.add_row("Thời gian:", is_day)
 
     # Đóng gói bảng vào Panel giao diện TUI
     panel = Panel(
         table,
-        title="[bold green]📍 THỜI TIẾT THÀNH PHỐ HUẾ[/bold green]",
-        subtitle="[dim]Cập nhật từ Open-Meteo[/dim]",
+        title="[bold red1]THỜI TIẾT THÀNH PHỐ HUẾ[/bold red1]",
+        # subtitle="[dim]Cập nhật từ NSTCrystal",
         border_style="magenta",
         expand=False,
     )

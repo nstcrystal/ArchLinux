@@ -38,6 +38,8 @@ def display_image_chafa(image_url):
             "block",
             "--size",
             f"{cols // 2}x{rows // 2}",
+            # "--align", 
+            # "mid,mid -d 5",
             "-",
         ],
         input=response.content,
@@ -47,3 +49,5 @@ def display_image_chafa(image_url):
 
 if __name__ == "__main__":
     display_image_chafa(get_random_waifu())
+    # display_image_chafa(get_random_waifu())
+    # display_image_chafa(get_random_waifu())
