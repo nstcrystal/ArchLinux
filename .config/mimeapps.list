@@ -1,0 +1,24 @@
+[Added Associations]
+image/png=satty.desktop;org.gnome.Nautilus.desktop;
+video/mp4=mpv-11.desktop;mpv-10.desktop;mpv-9.desktop;mpv-8.desktop;mpv-7.desktop;mpv-6.desktop;mpv-5.desktop;mpv-4.desktop;mpv-3.desktop;mpv-2.desktop;
+application/vnd.rar=org.kde.ark.desktop;
+application/zip=org.kde.ark.desktop;
+image/jpeg=gimp.desktop;satty.desktop;
+text/x-shellscript=kitty-open.desktop;rofi.desktop;
+application/json=code.desktop;firefox.desktop;
+text/plain=code.desktop;
+text/x-python=code.desktop;
+application/x-zerosize=code.desktop;
+
+[Default Applications]
+video/mp4=mpv-11.desktop;
+image/jpeg=satty.desktop
+text/x-shellscript=kitty-open.desktop
+x-scheme-handler/discord=vesktop.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+text/x-python=code.desktop
+application/x-zerosize=code.desktop

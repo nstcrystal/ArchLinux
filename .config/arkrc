@@ -1,0 +1,10 @@
+[ExtractDialog]
+1920x1200 screen: Window-Maximized=true
+DirHistory[$e]=$HOME/Downloads/mod_stardew,$HOME/Downloads/,$HOME/Downloads/mod_stardew/,$HOME/Downloads/mod_stardew/patch 43121 1.2.1 2026-07-11T07-26Z NuyTYgwMs/,$HOME/Downloads/mod_stardew/ButtonsExtraBooks/[CP] Button's Extra Books/i18n,$HOME/Downloads/止丸式初音ミクNT_ver1.1.2
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+StatusBar=Disabled

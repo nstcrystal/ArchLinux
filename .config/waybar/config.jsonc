@@ -6,49 +6,57 @@
     ],
     "modules-center": [
         "hyprland/workspaces"
-        
     ],
     "modules-right": [
         "group/control",
         "power-profiles-daemon",
         "clock"
-        ],
+    ],
     //modules-------------------------
     "battery": {
         "tooltip-format": "Battery : {capacity} %\nRemain : {time}",
         "states": {
             "charged": 100,
-            "mid":      40,
+            "mid": 40,
             "critical": 20
         },
         "format": "{capacity}",
         "format-charging": "",
         "format-plugged": "",
         "format-icons": [
-                "󰁺",
-                "󰁼",
-                "󰁾",
-                "󰂀",
-                "󰁹"
-            ],
+            "󰁺",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰁹"
+        ],
         "on-click": "swaync-client -t -sw"
-            
-        
     },
+
+
+    // "custom/weather": {
+    //     "format": "{} ",
+    //     "tooltip": true,
+    //     "interval": 3600,
+    //     "exec": "wttrbar --location 'Hue,Vietnam'",
+    //     "return-type": "json"
+    // },
+
+
     "clock": {
         "format": "{:%I : %M %p}",
         "format-alt": "{:%d %m %Y}",
-        "interval": 1 ,
+        "interval": 1,
         "tooltip": false
     },
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5"
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
         },
         "sort-by-number": true,
         "persistent-workspaces": {
@@ -87,7 +95,8 @@
     "network": {
         "on-click": "swaync-client -t -sw",
         "on-click-right": "networkmanager_dmenu",
-        "interface": "wlo1",
+        "interface": "wlp0s20f3",
+        "family": "ipv4_6",
         "format": "",
         "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
@@ -154,12 +163,20 @@
         "format": "   {}% ",
         "on-click": "kitty btop"
     },
-      "group/control": {
-    "modules": ["network", "pulseaudio", "battery"],
-    "orientation": "horizontal"
-  },
-        "group/start": {
-    "modules": ["custom/appmenu", "memory"],
-    "orientation": "horizontal"
-  }
+    "group/control": {
+        "modules": [
+            "network",
+            "pulseaudio",
+            "battery"
+            // "custom/weather"
+        ],
+        "orientation": "horizontal"
+    },
+    "group/start": {
+        "modules": [
+            "custom/appmenu",
+            "memory"
+        ],
+        "orientation": "horizontal"
+    }
 }
