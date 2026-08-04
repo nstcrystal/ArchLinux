@@ -2,6 +2,10 @@ oh-my-posh init fish -c ~/.poshthemes/catppuccin_macchiato.omp.json | source
 
 set -gx XDG_DATA_DIRS "$XDG_DATA_DIRS:-/usr/local/share:/usr/share"
 set -gx XDG_DATA_DIRS "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share"
+set -gx EZA_COLORS "xx=37"
+
+
+
 
 figlet "                        NSTCrystal"
 #python workspace/tui_app/weather.py
