@@ -1,0 +1,31 @@
+-- Equivalent of modules/input.conf
+hl.config({
+    input = {
+        kb_layout  = "us",
+        kb_variant = "",
+        kb_model   = "",
+        -- kb_options = "grp:lalt_lshift_toggle"
+        kb_rules   = "",
+
+        accel_profile = "flat",
+
+        follow_mouse = 1,
+
+        sensitivity = 0,
+
+        touchpad = {
+            natural_scroll = false,
+        },
+    },
+})
+
+hl.gesture({
+    fingers   = 3,
+    direction = "horizontal",
+    action    = "workspace",
+})
+
+hl.device({
+    name        = "epic-mouse-v1",
+    sensitivity = 0,
+})
