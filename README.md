@@ -1,4 +1,4 @@
-# ArchLinux + HyprLand — Cấu hình và hướng dẫn sử dụng
+# ArchLinux + HyprLand: Cấu hình và hướng dẫn sử dụng
 
 Bộ cấu hình này chứa các thiết lập cá nhân cho Hyprland (Wayland) và một số tiện ích (rofi, kitty, waybar, v.v.).
 
