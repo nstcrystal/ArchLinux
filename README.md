@@ -1,10 +1,11 @@
 # ArchLinux + HyprLand — Cấu hình và hướng dẫn sử dụng
 
-Bộ cấu hình này chứa các thiết lập cá nhân cho Hyprland (Wayland) và một số tiện ích (rofi, kitty, waybar, v.v.). README dưới đây giải thích cách chuẩn bị môi trường, cài đặt dependencies và cách sử dụng / tuỳ chỉnh cấu hình.
+Bộ cấu hình này chứa các thiết lập cá nhân cho Hyprland (Wayland) và một số tiện ích (rofi, kitty, waybar, v.v.).
 
 ---
 
 ## Tổng quan nhanh
+
 - Cấu hình Hyprland chính: `.config/hypr/hyprland.lua` — file Lua này nạp các module: `modules/monitors`, `modules/my_programs`, `modules/auto_start`, `modules/env`, `modules/look_and_feel`, `modules/animations`, `modules/input`, `modules/key_binds`, `modules/windows_and_workspaces`.
 - Bảng màu: `.config/hypr/colors.lua`.
 - Khóa màn hình / idle: `.config/hypr/hypridle.conf` gọi các script:
@@ -14,6 +15,7 @@ Bộ cấu hình này chứa các thiết lập cá nhân cho Hyprland (Wayland)
 ---
 
 ## Yêu cầu trước khi cài
+
 - Hệ thống Arch Linux đã cài và cập nhật.
 - Driver GPU phù hợp:
   - Intel / AMD: `mesa` và driver vga tương ứng (ví dụ `xf86-video-intel`, `xf86-video-amdgpu`) — nếu dùng X11 fallback; cho Wayland thường chỉ cần `mesa` + driver kernel.
@@ -25,6 +27,7 @@ Bộ cấu hình này chứa các thiết lập cá nhân cho Hyprland (Wayland)
 ---
 
 ## Packages & Dependencies (gợi ý)
+
 Một số package thường dùng với cấu hình này (có thể ở repo chính thức hoặc AUR). Thay đổi theo nhu cầu cá nhân.
 
 Ví dụ cài qua pacman (repo chính thức):
@@ -58,6 +61,7 @@ Lưu ý: tên package tùy thời điểm; kiểm tra Arch repositories và AUR.
 ---
 
 ## Cài đặt cấu hình từ repo này
+
 1. Clone repo:
 
 ```bash
@@ -87,6 +91,7 @@ Thư mục `~/.config/hypr/hyprlock/` (nếu tồn tại) chứa `hyprlock.conf`
 ---
 
 ## Khởi động Hyprland
+
 - Bằng display manager: chọn session Hyprland khi đăng nhập.
 - Từ TTY (không dùng DM): bạn có thể chạy Hyprland trực tiếp. Nếu cần khởi tạo session DBus:
 
@@ -101,6 +106,7 @@ Hyprland
 ---
 
 ## Tính năng chính và cách dùng theo cấu hình repo
+
 - Reload cấu hình Hyprland:
 
 ```bash
@@ -126,6 +132,7 @@ hyprctl reload
 ---
 
 ## Tuỳ chỉnh nhanh
+
 - Thay đổi màu: edit `~/.config/hypr/colors.lua`.
 - Thêm ứng dụng khởi động: edit `modules/my_programs.lua` (hoặc file tương ứng trong `.config/hypr/modules/`).
 - Thay đổi timeout khoá màn hình: edit `.config/hypr/hypridle.conf`.
@@ -136,6 +143,7 @@ Sau khi sửa, chạy `hyprctl reload` để áp dụng (hoặc đăng xuất/đ
 ---
 
 ## Khắc phục sự cố
+
 - Nếu Hyprland không khởi động: kiểm tra lỗi khi chạy từ TTY (xem output) — thiếu driver GPU, thiếu thư viện wlroots, hoặc quyền seat/login có thể gây lỗi.
 - Lỗi screenshot/portal: cài `xdg-desktop-portal` và `xdg-desktop-portal-hyprland`.
 - Nếu khóa màn hình không chạy: kiểm tra đường dẫn và quyền thực thi của `lock_anim.sh` và file `hyprlock.conf`.
@@ -144,13 +152,7 @@ Sau khi sửa, chạy `hyprctl reload` để áp dụng (hoặc đăng xuất/đ
 ---
 
 ## Ghi chú
-- File cấu hình trong repo giả định bạn dùng Hyprland và các tiện ích tương thích Wayland. Nếu bạn dùng GPU NVIDIA hoặc thiết lập đặc thù, cần tham khảo tài liệu Hyprland và Arch Wiki để có hướng dẫn chi tiết.
-- Đây là cấu hình cá nhân — hãy đọc kỹ từng file trong `.config/hypr/` trước khi áp dụng.
 
 Tài liệu tham khảo hữu ích:
 - Hyprland docs: https://wiki.hypr.land/
 - Arch Wiki (Wayland, GPU drivers, AUR): https://wiki.archlinux.org/
-
----
-
-Tôi đã cập nhật README để bao gồm hướng dẫn cài đặt và sử dụng ArchLinux + Hyprland với cấu hình trong repo. Nếu bạn muốn tôi commit thay đổi này trực tiếp vào repository, tôi đã làm rồi; nếu cần chỉnh sửa thêm (NVIDIA/AUR checklist, English version, hoặc thêm script install tự động), tôi có thể tiếp tục.
