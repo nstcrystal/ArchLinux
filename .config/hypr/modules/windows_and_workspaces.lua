@@ -58,11 +58,18 @@ hl.layer_rule({
 -- })
 
 -- Transparency rules for common apps
+-- hl.window_rule({
+--     name    = "vscode-transparency",
+--     match   = { class = "^(code)$|^(code-url-handler)$" },
+--     opacity = "0.9 override 0.9 override",
+-- })
+
 hl.window_rule({
     name    = "vscode-transparency",
-    match   = { class = "^(code)$|^(code-url-handler)$" },
+    match   = { class = "^(com\\.microsoft\\.VSCode)$" },
     opacity = "0.9 override 0.9 override",
 })
+
 
 hl.window_rule({
     name    = "spotify-transparency",
